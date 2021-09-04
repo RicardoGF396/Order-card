@@ -1,0 +1,141 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Pale blue: hsl(225, 100%, 94%) (Background)
+- Bright blue: hsl(245, 75%, 52%) (Main button / change__link))
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%) (Payment container 
+- Desaturated blue: hsl(224, 23%, 55%) (Text)
+- Dark blue: hsl(223, 47%, 23%) (Tittle)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900 */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --bg-color: hsl(225, 100%, 94%);
+    --btn-color: hsl(245, 75%, 52%);
+    --very-blue: hsl(245, 75%, 52%);
+    --text-color: hsl(224, 23%, 55%);
+    --title-color: hsl(223, 47%, 23%);
+    --payment-color: hsl(226, 30%, 97%);
+
+    --text-size: 16px;
+}
+
+
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--bg-color);
+}
+
+.container__card{
+    display: flex;
+    justify-content:center;
+    align-self: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2rem;
+}
+
+.card{
+    width: 365px;
+    height: 625px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 1.5rem;
+    background-color: white;
+}
+
+.img{
+    height: 180px;
+    object-fit: cover;
+}
+
+.title{
+    color: var(--title-color);
+}
+
+.container__payment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: .5rem auto;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    background-color: var(--payment-color);
+}
+
+.payment__text{
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.price{
+    font-weight: 400;
+}
+
+.change__link{
+    font-weight: 600;
+}
+
+.main__button{
+    margin: 2rem;
+    padding: 1rem;
+    background-color: var(--btn-color);
+    color: white;
+    font-weight: 600;
+    border-radius: .8rem;
+    box-shadow: 2px 20px 75px 10px rgba(56,40,224,0.4);
+
+}
+
+.cancel__order{
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.text__box{
+    color: var(--text-color);
+}
+
+.price{
+    color: var(--text-color);
+}
+
+
+@media(min-width:1440px){
+    .card{
+        width: 400px;
+    }
+
+    .img{
+        height: 200px;
+    }
+
+    .text__box{
+        margin: .8rem;
+    }
+}
